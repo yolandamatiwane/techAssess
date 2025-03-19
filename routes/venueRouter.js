@@ -1,5 +1,5 @@
 import express from 'express'
-import { fetchVenues } from '../controller/venueConroller.js'
+import { fetchVenues } from '../controller/venueController.js'
 
 const router = express.Router()
 
