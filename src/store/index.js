@@ -5,7 +5,7 @@ import router from '../router';
 
 const apiUrl = 'https://technicalassessment-93ha.onrender.com';
 
-axios.defaults.withCredentials = true
+//axios.defaults.withCredentials = true
 
 
 export default createStore({
