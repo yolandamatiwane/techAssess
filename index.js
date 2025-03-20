@@ -4,7 +4,7 @@ import venueRouter from './routes/venueRouter.js';
 import workshopsRouter from './routes/workshopsRouter.js'
 import bookingRouter from './routes/bookingsRouter.js'
 
-let port = process.env.PORT || 3000
+let port = 3000
 
 const app = express()
 
