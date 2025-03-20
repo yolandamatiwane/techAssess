@@ -1,42 +1,53 @@
 <template>
+  <h4>Latest Market Trends:</h4>
     <div class="table-container">
-        <div class="spot-table">
+        <div class="table-responsive spot-table">
             <table class="table table-dark table-striped">
                 <thead>
                     <tr>
                         <th>
-                            Name 
-                            <div class="sort-icons">
-                                <i class="fa-solid fa-sort-up" @click="sortByNameAsc"></i>
-                                <i class="fa-solid fa-sort-down" @click="sortByNameDesc"></i>
+                            <div class="custom">
+                              <span>Name</span>
+                              <div class="sort-icons">
+                                  <i class="fa-solid fa-sort-up" @click="sortByNameAsc"></i>
+                                  <i class="fa-solid fa-sort-down" @click="sortByNameDesc"></i>
+                              </div>
+                            </div>
+                        </th>
+                        <th >
+                            <div class="custom">
+                              <span>Price</span>
+                              <div class="sort-icons">
+                                  <i class="fa-solid fa-sort-up" @click="sortByPriceAsc"></i>
+                                  <i class="fa-solid fa-sort-down"  @click="sortByPriceDesc"></i>
+                              </div>
                             </div>
                         </th>
                         <th>
-                            Price
-                            <div class="sort-icons">
-                                <i class="fa-solid fa-sort-up" @click="sortByPriceAsc"></i>
-                                <i class="fa-solid fa-sort-down"  @click="sortByPriceDesc"></i>
+                            <div class="custom">
+                              <span>Move</span>
+                              <div class="sort-icons">
+                                  <i class="fa-solid fa-sort-up" @click="sortByMoveAsc"></i>
+                                  <i class="fa-solid fa-sort-down" @click="sortByMoveDesc"></i>
+                              </div>
+                            </div>
+                        </th >
+                        <th >
+                            <div class="custom">
+                              <span>Pmove</span>
+                              <div class="sort-icons">
+                                  <i class="fa-solid fa-sort-up" @click="sortByPmoveAsc"></i>
+                                  <i class="fa-solid fa-sort-down" @click="sortByPmoveDesc"></i>
+                              </div>
                             </div>
                         </th>
                         <th>
-                            Move
-                            <div class="sort-icons">
-                                <i class="fa-solid fa-sort-up" @click="sortByMoveAsc"></i>
-                                <i class="fa-solid fa-sort-down" @click="sortByMoveDesc"></i>
-                            </div>
-                        </th>
-                        <th>
-                            Pmove 
-                            <div class="sort-icons">
-                                <i class="fa-solid fa-sort-up" @click="sortByPmoveAsc"></i>
-                                <i class="fa-solid fa-sort-down" @click="sortByPmoveDesc"></i>
-                            </div>
-                        </th>
-                        <th>
-                            Date 
-                            <div class="sort-icons">
-                                <i class="fa-solid fa-sort-up" @click="sortByDateTimeAsc"></i>
-                                <i class="fa-solid fa-sort-down" @click="sortByDateTimeDesc"></i>
+                            <div class="custom">
+                              <span>Date</span>
+                              <div class="sort-icons">
+                                  <i class="fa-solid fa-sort-up" @click="sortByDateTimeAsc"></i>
+                                  <i class="fa-solid fa-sort-down" @click="sortByDateTimeDesc"></i>
+                              </div>
                             </div>
                         </th>
                     </tr>
@@ -143,14 +154,16 @@
 </script>
 <style scoped>
 .table-container {
+  padding: auto;
   display: flex;
   justify-content: center;
   width: 100%;
   overflow-y: auto;
-  height: 600px;
+  height: 550px;
 }
 
 .spot-table {
+  margin: auto;
   width: 70%;
   max-width: 100%;
   flex-shrink: 0;
@@ -170,20 +183,26 @@
   white-space: nowrap;
 }
 
+.custom {
+  display: flex;
+  justify-content: space-between;
+
+}
+
 tr th {
   position: sticky;
   top: 0;
   z-index: 1;
   /* display: flex; */
-  align-items: center; /* Added */
+  align-items: center;
 }
 
 .table tbody tr:nth-child(even) {
-  background-color: #495057; /* Darker even rows */
+  background-color: #495057; 
 }
 
 .table tbody tr:nth-child(odd) {
-  background-color: #343a40; /* Dark odd rows */
+  background-color: #343a40;
   color: white;
 }
 
