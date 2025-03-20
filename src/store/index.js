@@ -1,26 +1,45 @@
+/* eslint-disable */
 import { createStore } from 'vuex'
 import axios from 'axios'
+import router from '../router'
 
-const apiUrl = 'https://api.sharenet.co.za/api/v1/px2/spots'
+const apiUrl = 'https://technicalassessment-93ha.onrender.com'
+
+// axios.defaults.withCredentials = true
 
 export default createStore({
   state: {
-    data:null
+    venues:null,
+    bookings:null,
+    workshops:null
   },
   getters: {
   },
   mutations: {
-    setData(state, payload) {
-      state.data = payload
+    setVenues(state, payload) {
+      state.venues = payload
+    },
+    setBookings(state, payload) {
+      state.bookings = payload
+    },
+    setWorkshops(state, payload) {
+      state.workshops = payload
     }
   },
   actions: {
-    async fetchData({ commit }) {
-      const {data} = await axios.get(apiUrl)
-        commit('setData', data.spots)
+    async fetchVenues({ commit }) {
+      try {
+        console.log(`${apiUrl}/venues`)
+        const {data} = await axios.get(`${apiUrl}/venues`);
         console.log('On your left')
-        console.log(data.spots)
+        console.log(data)
+        commit('setVenues', data); 
+        console.log(data)
+      } catch (error) {
+        console.error("Error fetching venues:", error);
+      }
     }
+     
   },
   modules: {
   }
