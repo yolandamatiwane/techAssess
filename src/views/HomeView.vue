@@ -1,7 +1,10 @@
 <template>
-  <div>
-    <SpotTable :spotsData="spotsData" />
-  </div>
+  <section class="">
+    <h4 >Latest Market Trends</h4>
+    <div>
+      <SpotTable :spotsData="spotsData" />
+    </div>
+  </section>
 </template>
 
 <script>

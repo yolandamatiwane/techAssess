@@ -1,5 +1,4 @@
 <template>
-  <h4>Latest Market Trends:</h4>
     <div class="table-container">
         <div class="table-responsive spot-table">
             <table class="table table-dark table-striped">

@@ -75,7 +75,7 @@ export default {
   padding-bottom: 30px;
 }
 .container {
-  background-color: #303030;
+  background-color: #152d4d;
   border-radius: 10px;
 }
 
